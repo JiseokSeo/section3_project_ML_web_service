@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import fasttext
 from sklearn.model_selection import train_test_split
 
 # df = pd.read_csv('ml/final.csv', index_col=0)

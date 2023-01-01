@@ -1,7 +1,6 @@
 import flask
 from flask import Flask, request, render_template
 import joblib
-import fasttext
 import numpy as np
 from scipy import misc
 
@@ -34,6 +33,7 @@ def make_prediction():
 if __name__ == '__main__':
     # 모델 로드
     # ml/model.py 선 실행 후 생성
-    model = fasttext.load_model('./model/model.bin')
+    with open('model/model.bin', 'rb') as file:
+        model = file.read()
     # Flask 서비스 스타트
     app.run(host='0.0.0.0', port=8000, debug=True)
