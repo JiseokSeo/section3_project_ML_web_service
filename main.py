@@ -1,7 +1,6 @@
 import flask
 from flask import Flask, request, render_template
 import joblib
-import fasttext
 import numpy as np
 from scipy import misc
 
